@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/homeScreen">
+
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.example.mynotes.Screens.homeScreen"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreen_to_editnotes"
+            app:destination="@id/editnotes"
+            app:popUpTo="@id/homeScreen" />
+        <action
+            android:id="@+id/action_homeScreen_to_viewnotes"
+            app:destination="@id/viewnotes" />
+        <action
+            android:id="@+id/action_homeScreen_to_search2"
+            app:destination="@id/search2" />
+    </fragment>
+    <fragment
+        android:id="@+id/editnotes"
+        android:name="com.example.mynotes.Screens.editnotes"
+        android:label="fragment_editnotes"
+        tools:layout="@layout/fragment_editnotes" />
+    <fragment
+        android:id="@+id/viewnotes"
+        android:name="com.example.mynotes.Screens.viewnotes"
+        android:label="fragment_viewnotes"
+        tools:layout="@layout/fragment_viewnotes">
+    <argument
+        android:name="note"
+        app:argType="string" />
+    <argument
+        android:name="title"
+        app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/search2"
+        android:name="com.example.mynotes.Screens.search"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_search2_to_viewnotes"
+            app:destination="@id/viewnotes" />
+    </fragment>
+</navigation>
