@@ -31,6 +31,9 @@ class viewnotes : Fragment() {
         binding.backbutton.setOnClickListener{
             findNavController().popBackStack()
         }
+        binding.deletebutton.setOnClickListener {
+            delete()
+        }
 
         return view
     }
@@ -51,6 +54,13 @@ class viewnotes : Fragment() {
                 }
             }
         }
+    }
+    fun delete(){
+        val db=database.getDatabase(requireContext())
+        GlobalScope.launch {
+        db.dao().deleteNote(User(args.id,args.title,args.note))
+    }
+        findNavController().popBackStack()
     }
     override fun onDestroyView() {
         _binding=null

@@ -44,6 +44,7 @@ class editnotes : Fragment() {
         val note=binding.usernoteinput.text
         val title=binding.title.text
         val db=database.getDatabase(requireContext())
+
         if (note != null) {
             if(note.isNotEmpty()){
                 GlobalScope.launch {
