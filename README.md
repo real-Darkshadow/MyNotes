@@ -1,44 +1,54 @@
 
-Notes App README File
+# Notes App
 
-
-Aadarsh verma
-I made a notes app with room database and a great ui tell me the readme file for this spp to upload on github
-
-Notes App
 This is a simple, lightweight and user-friendly Notes application built with Room Database and a beautiful UI. With this app, you can easily take, store and manage all your notes in one place.
 
-Features
-Easy to create, edit and delete notes
-Store notes locally using Room Database
-Clean and beautiful user interface
-Supports text formatting (bold, italic, underline)
-Notes are saved automatically, no need to manually save
-Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-Prerequisites
-Android Studio
-An Android device or emulator with API level 21 or higher
-Installation
-Clone the repository to your local machine
-bash
-Copy code
-git clone https://github.com/YOUR-USERNAME/Notes-App.git
-Open the project in Android Studio
-Connect an Android device or launch an emulator
-Run the app on the device or emulator by clicking the "Run" button in Android Studio
-Built With
-Android Studio - The development IDE for Android
-Room Persistence Library - SQLite object mapping library for Android
-Contributing
-If you'd like to contribute to this project, feel free to submit a pull request. Your contributions are always welcome!
+## Features
 
-License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+- Easy to create, edit and delete notes
 
-Acknowledgments
-Material Design Guidelines - Inspiration for the UI design of the app.
+- Store notes locally using Room Database
+
+- Clean and beautiful user interface
+
+- Supports text formatting (bold, italic, underline)
+
+- Notes are saved automatically, no need to manually save
 
 
+## Architecture
 
+This app is built using the Model-View-ViewModel (MVVM) architecture pattern. This pattern separates the app into three layers:
+
+- Model: This layer contains the data and business logic of the app. In this app, the Note class represents the data model for each note.
+
+- View: This layer is responsible for displaying the UI to the user. In this app, the MainActivity class represents the view.
+
+- ViewModel: This layer is responsible for handling the communication between the view and the model. In this app, the NoteViewModel class represents the view model.
+
+The MVVM pattern allows for a clean separation of concerns and makes it easy to test each layer of the app independently.
+
+
+## Libraries Used
+This app uses the following libraries:
+
+- LiveData: Used to observe changes in data and update the UI accordingly.
+- ViewModel: Used to store and manage UI-related data.
+- Room: Used to store and manage notes data locally.
+## Screenshots
+
+![App Screenshot](https://res.cloudinary.com/djejz6zgw/image/upload/v1677731161/bg_a6bfnr.png)
+![App Screenshot](https://res.cloudinary.com/djejz6zgw/image/upload/v1677731161/1675772728771_100_sqp9nn.png)
+![App Screenshot](https://res.cloudinary.com/djejz6zgw/image/upload/v1677731161/1675772738938_100_zot54j.png)
+![App Screenshot](https://res.cloudinary.com/djejz6zgw/image/upload/v1677731161/1675772735888_100_c6cycd.png)
+
+
+## Contributing
+
+Contributions are always welcome! If you would like to contribute to this project, please fork the repository and create a pull request with your changes.
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://choosealicense.com/licenses/mit/) file for details.
